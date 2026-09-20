@@ -28,7 +28,7 @@ https://github.com/Nnnnobel/ShaderForgeConvert.git?path=/Packages/com.shaderforg
 
 也可把 `Packages/com.shaderforgeconvert` 作为 Unity 本地包加入项目。在 Project 面板选中 Shader Forge `.shader`，运行 `Tools > Shader Forge Convert > Convert Selected Shader`。插件会要求选择新文件路径，导入新 Shader 并检查编译错误。源 Shader 不会被覆盖；材质引用不会自动迁移。
 
-当前已实现受限的语义重命名、纹理采样变量命名、来源注释与单一 Emission 函数抽取。即使导入成功，也应人工检查代码和画面。用 `dotnet run --project tools/SmokeTests/SmokeTests.csproj` 可运行核心解析冒烟测试；`tools/UnityBatchProbe` 提供在临时 Unity 工程中复测样本的方法。
+当前已实现受限的语义重命名、纹理采样变量命名、来源注释与单一 Emission 函数抽取。即使导入成功，也应人工检查代码和画面。用 `dotnet run --project tools/SmokeTests/SmokeTests.csproj` 可运行核心解析冒烟测试；`tools/UnityBatchProbe` 提供在临时 Unity 工程中复测样本、材质契约和一份示例画面的方法。
 
 ## 开源与来源
 
