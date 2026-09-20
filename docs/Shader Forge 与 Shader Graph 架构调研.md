@@ -67,7 +67,7 @@ Agentlien 的 ShaderCleanup 针对**已经生成**的 Shader Graph 源码，按�
 
 当前 Unity 包已实现：读取 `SF_DATA` 节点/边，追踪 Final 输入可达节点；根据可达节点的用户备注，把生成代码中的 `node_ID` 变量改成语义名并加来源注释；将可映射的纹理采样变量按属性名命名；对只连接 Emission、且片元逻辑是连续声明语句的 Shader，把该逻辑抽成 `ComputeEmission`。导出时删除图元数据和 Shader Forge 专用 Inspector 引用，输出新 Shader 名称。未知节点或复杂控制流保留原代码。**这仍是 `Partial`，不代表通用 Shader 已完成逻辑化。**
 
-已用 Unity **2022.3.62f3** 的独立临时工程做编辑器编译，并对官方 `PresetUnlit.shader`、`PresetParticleAdditive.shader`、`VertexAnimation.shader` 导出后进行 Unity Shader 导入与错误检查：三份均成功、无 `ShaderUtil.ShaderHasError` 错误；前两份各抽出一个 Emission 函数，后者解析 27 个节点、重命名 3 个有备注的可达节点。另在 .NET 冒烟程序中遍历了仓库 10 个预设和 10 个示例 `.shader`，20/20 完成图解析与源码转换调用。尚未做画面/材质/平台对照，也没有证明一般 Shader 的效果等价。
+已用 Unity **2022.3.62f3** 的独立临时工程做编辑器编译，并对官方 10 个预设和 10 个示例 `.shader` 导出后进行 Unity Shader 导入与错误检查：20 份原文件和 20 份导出文件均无 `ShaderUtil.ShaderHasError` 错误。`PresetUnlit` 和 `PresetParticleAdditive` 各抽出一个 Emission 函数；`VertexAnimation` 解析 27 个节点，实际重命名 1 个源码变量。早期探针曾把 3 个候选名称都计入重命名，本轮已改为只统计真正发生的源码替换。尚未做画面/材质/平台对照，也没有证明一般 Shader 的效果等价。复测步骤见[验证记录](./验证记录.md)。
 
 ## 6. 下一步实现决策
 

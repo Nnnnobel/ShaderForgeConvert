@@ -12,6 +12,7 @@ Open-source Unity Editor tool for turning Shader Forge output into readable code
 - [项目需求与实施方案](./docs/项目文档.md)：逻辑化输出标准、转换流程、分阶段交付与验收。
 - [Shader Forge 与 Shader Graph 架构调研](./docs/Shader%20Forge%20与%20Shader%20Graph%20架构调研.md)：上游文档、生成机制、组件职责与已完成探针。
 - [Shader Forge 组件清单](./docs/Shader%20Forge%20组件清单.md)及[逐文件清单](./docs/Shader%20Forge%20文件清单.tsv)：节点与资源盘点。
+- [验证记录](./docs/验证记录.md)：Git 安装、真实样本导入及尚未覆盖的验证边界。
 
 ## 一句话结论
 
@@ -27,7 +28,7 @@ https://github.com/Nnnnobel/ShaderForgeConvert.git?path=/Packages/com.shaderforg
 
 也可把 `Packages/com.shaderforgeconvert` 作为 Unity 本地包加入项目。在 Project 面板选中 Shader Forge `.shader`，运行 `Tools > Shader Forge Convert > Convert Selected Shader`。插件会要求选择新文件路径，导入新 Shader 并检查编译错误。源 Shader 不会被覆盖；材质引用不会自动迁移。
 
-当前已实现受限的语义重命名、纹理采样变量命名、来源注释与单一 Emission 函数抽取。即使导入成功，也应人工检查代码和画面。用 `dotnet run --project tools/SmokeTests/SmokeTests.csproj` 可运行核心解析冒烟测试。
+当前已实现受限的语义重命名、纹理采样变量命名、来源注释与单一 Emission 函数抽取。即使导入成功，也应人工检查代码和画面。用 `dotnet run --project tools/SmokeTests/SmokeTests.csproj` 可运行核心解析冒烟测试；`tools/UnityBatchProbe` 提供在临时 Unity 工程中复测样本的方法。
 
 ## 开源与来源
 

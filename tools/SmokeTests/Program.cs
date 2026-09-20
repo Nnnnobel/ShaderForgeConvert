@@ -41,6 +41,22 @@ try { ShaderConverter.Convert(fixture, "Test/Original"); }
 catch (ArgumentException) { rejectedSameName = true; }
 Check(rejectedSameName, "Shader name collision rejected");
 
+string continuationFixture = fixture.Replace("float node_2 =", "#define USE_NODE \\\n    node_2\nfloat node_2 =");
+ConversionResult continuation = ShaderConverter.Convert(continuationFixture, "Test/Continuation");
+Check(continuation.Source.Contains("#define USE_NODE \\\n    node_2"), "Macro continuation remains untouched");
+Check(continuation.Source.Contains("float node_2 ="), "Macro reference prevents unsafe rename");
+Check(continuation.RenamedNodes.Count == 0, "Skipped rename is not reported");
+
+string collisionFixture = fixture.Replace("float node_2 =", "float panningGradient = 1;\nfloat panningGradient_2 = 2;\nfloat node_2 =");
+ConversionResult collision = ShaderConverter.Convert(collisionFixture, "Test/Collision");
+Check(collision.Source.Contains("float panningGradient_3 = pow"), "Renamed variable avoids existing names");
+Check(collision.Source.Contains("return panningGradient_3"), "Collision-safe reference rewrite");
+
+string commentOnlyFixture = fixture.Replace("float node_2 = pow(0.5, 2.0);", "float unused = pow(0.5, 2.0);")
+    .Replace("return node_2;", "return unused;");
+ConversionResult commentOnly = ShaderConverter.Convert(commentOnlyFixture, "Test/CommentOnly");
+Check(commentOnly.RenamedNodes.Count == 0, "Comment-only identifier is not reported as renamed");
+
 string sourcePath = Environment.GetEnvironmentVariable("SHADER_FORGE_SAMPLE");
 if (!string.IsNullOrEmpty(sourcePath))
 {

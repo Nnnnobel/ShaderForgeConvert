@@ -1,6 +1,6 @@
 {
   "name": "com.shaderforgeconvert",
-  "version": "0.1.0-preview.1",
+  "version": "0.1.0-preview.2",
   "displayName": "Shader Forge Convert",
   "description": "Editor tools for tracing and restructuring Shader Forge generated shaders.",
   "unity": "2022.3",

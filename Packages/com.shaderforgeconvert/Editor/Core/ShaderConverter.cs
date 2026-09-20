@@ -61,6 +61,7 @@ namespace ShaderForgeConvert
             HashSet<int> reachable = graph.ReachableNodes();
             var proposed = new Dictionary<string, string>(StringComparer.Ordinal);
             var usedNames = new HashSet<string>(StringComparer.Ordinal);
+            var sampleCandidates = new HashSet<string>(StringComparer.Ordinal);
             foreach (ForgeNode node in graph.Nodes.Values.OrderBy(n => n.Id))
             {
                 if (!reachable.Contains(node.Id) || string.IsNullOrWhiteSpace(node.Comment)) continue;
@@ -68,9 +69,8 @@ namespace ShaderForgeConvert
                 if (ReferencedInDirective(body, generatedNodeName)) continue;
                 string name = Identifier(node.Comment);
                 if (name.Length == 0 || HlslReserved.Contains(name)) continue;
-                if (Regex.IsMatch(body, @"\b" + Regex.Escape(name) + @"\b", RegexOptions.CultureInvariant) || !usedNames.Add(name))
-                    name += "_" + node.Id.ToString(CultureInfo.InvariantCulture);
-                usedNames.Add(name);
+                name = UniqueName(name, node.Id, body, usedNames);
+                if (name == generatedNodeName) continue;
                 proposed[generatedNodeName] = name;
                 result.RenamedNodes[node.Id] = name;
             }
@@ -83,16 +83,19 @@ namespace ShaderForgeConvert
                 if (ReferencedInDirective(body, generated)) continue;
                 string semantic = Identifier(node.PropertyName.TrimStart('_')) + "Sample";
                 if (semantic.Length == 0) continue;
-                if (Regex.IsMatch(body, @"\b" + Regex.Escape(semantic) + @"\b", RegexOptions.CultureInvariant) || !usedNames.Add(semantic))
-                    semantic += "_" + node.Id.ToString(CultureInfo.InvariantCulture);
-                usedNames.Add(semantic);
+                semantic = UniqueName(semantic, node.Id, body, usedNames);
                 proposed[generated] = semantic;
-                result.SampleVariablesRenamed++;
+                sampleCandidates.Add(generated);
             }
 
             // Only touch HLSL/CG program regions. The tokenizer skips strings, comments and
             // preprocessor lines, so node identifiers in documentation or macros are preserved.
-            body = RewritePrograms(body, proposed, graph, result);
+            var rewritten = new HashSet<string>(StringComparer.Ordinal);
+            body = RewritePrograms(body, proposed, graph, result, rewritten);
+            foreach (int nodeId in result.RenamedNodes.Keys.ToArray())
+                if (!rewritten.Contains("node_" + nodeId.ToString(CultureInfo.InvariantCulture)))
+                    result.RenamedNodes.Remove(nodeId);
+            result.SampleVariablesRenamed = sampleCandidates.Count(rewritten.Contains);
             result.Source = body.TrimStart('\r', '\n');
             if (result.ExtractedFunctions == 0)
                 result.Warnings.Add("No complete emission logic chain was extracted into a function.");
@@ -104,10 +107,33 @@ namespace ShaderForgeConvert
 
         private static bool ReferencedInDirective(string source, string identifier)
         {
-            return Regex.IsMatch(source, @"(?m)^[ \t]*#[^\r\n]*\b" + Regex.Escape(identifier) + @"\b", RegexOptions.CultureInvariant);
+            var name = new Regex(@"\b" + Regex.Escape(identifier) + @"\b", RegexOptions.CultureInvariant);
+            int position = 0;
+            bool continued = false;
+            while (position < source.Length)
+            {
+                int end = source.IndexOf('\n', position);
+                if (end < 0) end = source.Length;
+                string line = source.Substring(position, end - position);
+                bool directive = continued || line.TrimStart(' ', '\t').StartsWith("#", StringComparison.Ordinal);
+                if (directive && name.IsMatch(line)) return true;
+                continued = directive && line.TrimEnd(' ', '\t', '\r').EndsWith("\\", StringComparison.Ordinal);
+                position = end < source.Length ? end + 1 : end;
+            }
+            return false;
         }
 
-        private static string RewritePrograms(string source, Dictionary<string, string> names, ForgeGraph graph, ConversionResult result)
+        private static string UniqueName(string preferred, int id, string source, HashSet<string> usedNames)
+        {
+            string candidate = preferred;
+            int suffix = id;
+            while (usedNames.Contains(candidate) || Regex.IsMatch(source, @"\b" + Regex.Escape(candidate) + @"\b", RegexOptions.CultureInvariant))
+                candidate = preferred + "_" + (suffix++).ToString(CultureInfo.InvariantCulture);
+            usedNames.Add(candidate);
+            return candidate;
+        }
+
+        private static string RewritePrograms(string source, Dictionary<string, string> names, ForgeGraph graph, ConversionResult result, HashSet<string> rewritten)
         {
             var program = new Regex(@"(?m)^[ \t]*(CGPROGRAM|HLSLPROGRAM)[ \t]*$", RegexOptions.CultureInvariant);
             var endProgram = new Regex(@"(?m)^[ \t]*(ENDCG|ENDHLSL)[ \t]*$", RegexOptions.CultureInvariant);
@@ -122,7 +148,7 @@ namespace ShaderForgeConvert
                 int codeStart = start.Index + start.Length;
                 output.Append(source, cursor, codeStart - cursor);
                 string code = source.Substring(codeStart, end.Index - codeStart);
-                code = ReplaceIdentifiers(code, names);
+                code = ReplaceIdentifiers(code, names, rewritten);
                 code = AddLogicComments(code, graph, result);
                 if (graph.FinalInputs.Count == 1 && graph.FinalInputs.ContainsKey("emission"))
                     code = TryExtractEmission(code, result);
@@ -204,7 +230,7 @@ namespace ShaderForgeConvert
             return result.ToString();
         }
 
-        private static string ReplaceIdentifiers(string code, Dictionary<string, string> names)
+        private static string ReplaceIdentifiers(string code, Dictionary<string, string> names, HashSet<string> rewritten)
         {
             var output = new StringBuilder(code.Length);
             int i = 0;
@@ -216,9 +242,21 @@ namespace ShaderForgeConvert
                 if (lineStart && (c == ' ' || c == '\t' || c == '\r')) { output.Append(c); i++; continue; }
                 if (lineStart && c == '#')
                 {
-                    int end = code.IndexOf('\n', i);
-                    if (end < 0) end = code.Length;
-                    output.Append(code, i, end - i); i = end; lineStart = false; continue;
+                    int end;
+                    do
+                    {
+                        end = code.IndexOf('\n', i);
+                        if (end < 0) end = code.Length;
+                        int last = end - 1;
+                        while (last >= i && (code[last] == ' ' || code[last] == '\t' || code[last] == '\r')) last--;
+                        bool continued = last >= i && code[last] == '\\' && end < code.Length;
+                        output.Append(code, i, end - i);
+                        if (end < code.Length) output.Append('\n');
+                        i = end < code.Length ? end + 1 : end;
+                        if (!continued) break;
+                    } while (i < code.Length);
+                    lineStart = true;
+                    continue;
                 }
                 lineStart = false;
                 if (c == '/' && i + 1 < code.Length && code[i + 1] == '/')
@@ -249,7 +287,12 @@ namespace ShaderForgeConvert
                     int start = i++;
                     while (i < code.Length && (char.IsLetterOrDigit(code[i]) || code[i] == '_')) i++;
                     string identifier = code.Substring(start, i - start);
-                    output.Append(names.TryGetValue(identifier, out string replacement) ? replacement : identifier);
+                    if (names.TryGetValue(identifier, out string replacement))
+                    {
+                        output.Append(replacement);
+                        rewritten.Add(identifier);
+                    }
+                    else output.Append(identifier);
                     continue;
                 }
                 output.Append(c); i++;
