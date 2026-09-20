@@ -81,4 +81,4 @@
 
 `CustomLighting`, `LightWrapping`, `Parallax`, `PixelRotator`, `Refraction`, `TessellationDisplacement`, `Tiles`, `Vegetation`, `VertexAnimation`, `VertexColorRounding`。
 
-此清单只说明仓库包含哪些组件；每个节点的端口、公式、阶段和兼容性需在实现节点转换时逐一核对其 `Evaluate`、序列化及生成器调用路径。
+这份清单记录源码组成，不代表节点已受转换器支持。兼容状态要结合 `Evaluate`、序列化字段、生成器调用路径和实际 Shader 验证。
