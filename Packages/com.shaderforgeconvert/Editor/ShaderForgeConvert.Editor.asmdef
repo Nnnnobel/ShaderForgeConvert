@@ -1,0 +1,8 @@
+{
+  "name": "ShaderForgeConvert.Editor",
+  "rootNamespace": "ShaderForgeConvert",
+  "references": [],
+  "includePlatforms": ["Editor"],
+  "allowUnsafeCode": false,
+  "autoReferenced": true
+}

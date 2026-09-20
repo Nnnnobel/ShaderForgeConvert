@@ -1,0 +1,513 @@
+relative_path	type	bytes
+Editor/Code/SFPSC_Blending.cs	.cs	27943
+Editor/Code/SFPSC_Console.cs	.cs	2639
+Editor/Code/SFPSC_Experimental.cs	.cs	1961
+Editor/Code/SFPSC_Geometry.cs	.cs	5685
+Editor/Code/SFPSC_Lighting.cs	.cs	11249
+Editor/Code/SFPSC_Meta.cs	.cs	9393
+Editor/Code/SFPSC_Properties.cs	.cs	14449
+Editor/Code/SFPS_Category.cs	.cs	8990
+Editor/Code/SF_Dependencies.cs	.cs	7391
+Editor/Code/SF_Editor.cs	.cs	64047
+Editor/Code/SF_EditorNodeBrowser.cs	.cs	11254
+Editor/Code/SF_EditorNodeData.cs	.cs	8879
+Editor/Code/SF_EditorNodeView.cs	.cs	24144
+Editor/Code/SF_ErrorEntry.cs	.cs	1599
+Editor/Code/SF_FeatureChecker.cs	.cs	4822
+Editor/Code/SF_InstructionPass.cs	.cs	3494
+Editor/Code/SF_NodeConnectionLine.cs	.cs	8098
+Editor/Code/SF_NodeConnector.cs	.cs	33805
+Editor/Code/SF_NodePreview.cs	.cs	10180
+Editor/Code/SF_NodeStatus.cs	.cs	1312
+Editor/Code/SF_NodeTreeStatus.cs	.cs	15000
+Editor/Code/SF_Parser.cs	.cs	8234
+Editor/Code/SF_PassSettings.cs	.cs	11525
+Editor/Code/SF_PreviewSettings.cs	.cs	481
+Editor/Code/SF_PreviewWindow.cs	.cs	14137
+Editor/Code/SF_SelectionManager.cs	.cs	9864
+Editor/Code/SF_Settings.cs	.cs	5671
+Editor/Code/SF_StatusBox.cs	.cs	8710
+Editor/Code/_ConnectionGroups/SFNCG_Append.cs	.cs	5000
+Editor/Code/_ConnectionGroups/SFNCG_Arithmetic.cs	.cs	7160
+Editor/Code/_ConnectionGroups/SFNCG_ChannelBlend.cs	.cs	617
+Editor/Code/_ConnectionGroups/SFNCG_ComponentMask.cs	.cs	4819
+Editor/Code/_ConnectionGroups/SFNCG_MatrixMultiply.cs	.cs	2685
+Editor/Code/_ConnectionGroups/SF_NodeConnectionGroup.cs	.cs	1701
+Editor/Code/_Enums/SF_VarTypeEnums.cs	.cs	163
+Editor/Code/_Evaluator/Pass_FwdAdd.cs	.cs	666
+Editor/Code/_Evaluator/SF_Evaluator.cs	.cs	94784
+Editor/Code/_Evaluator/_NewSystem/DependencyTree.cs	.cs	1856
+Editor/Code/_Nodes/SFN_Abs.cs	.cs	581
+Editor/Code/_Nodes/SFN_Add.cs	.cs	2158
+Editor/Code/_Nodes/SFN_AmbientLight.cs	.cs	1917
+Editor/Code/_Nodes/SFN_Append.cs	.cs	5499
+Editor/Code/_Nodes/SFN_ArcCos.cs	.cs	691
+Editor/Code/_Nodes/SFN_ArcSin.cs	.cs	691
+Editor/Code/_Nodes/SFN_ArcTan.cs	.cs	691
+Editor/Code/_Nodes/SFN_ArcTan2.cs	.cs	3263
+Editor/Code/_Nodes/SFN_Bitangent.cs	.cs	792
+Editor/Code/_Nodes/SFN_Blend.cs	.cs	8277
+Editor/Code/_Nodes/SFN_BlendOver.cs	.cs	2744
+Editor/Code/_Nodes/SFN_Ceil.cs	.cs	586
+Editor/Code/_Nodes/SFN_ChannelBlend.cs	.cs	5691
+Editor/Code/_Nodes/SFN_Clamp.cs	.cs	2125
+Editor/Code/_Nodes/SFN_Clamp01.cs	.cs	707
+Editor/Code/_Nodes/SFN_Code.cs	.cs	16683
+Editor/Code/_Nodes/SFN_Color.cs	.cs	3669
+Editor/Code/_Nodes/SFN_CommentBox.cs	.cs	760
+Editor/Code/_Nodes/SFN_ComponentMask.cs	.cs	10419
+Editor/Code/_Nodes/SFN_ConstantClamp.cs	.cs	3304
+Editor/Code/_Nodes/SFN_ConstantInverseLerp.cs	.cs	3061
+Editor/Code/_Nodes/SFN_ConstantLerp.cs	.cs	3092
+Editor/Code/_Nodes/SFN_Cos.cs	.cs	581
+Editor/Code/_Nodes/SFN_Cross.cs	.cs	913
+Editor/Code/_Nodes/SFN_Cubemap.cs	.cs	6321
+Editor/Code/_Nodes/SFN_DDX.cs	.cs	543
+Editor/Code/_Nodes/SFN_DDXY.cs	.cs	646
+Editor/Code/_Nodes/SFN_DDY.cs	.cs	543
+Editor/Code/_Nodes/SFN_Depth.cs	.cs	876
+Editor/Code/_Nodes/SFN_DepthBlend.cs	.cs	965
+Editor/Code/_Nodes/SFN_Desaturate.cs	.cs	2874
+Editor/Code/_Nodes/SFN_Distance.cs	.cs	1469
+Editor/Code/_Nodes/SFN_Divide.cs	.cs	959
+Editor/Code/_Nodes/SFN_Dot.cs	.cs	3266
+Editor/Code/_Nodes/SFN_E.cs	.cs	368
+Editor/Code/_Nodes/SFN_Exp.cs	.cs	1978
+Editor/Code/_Nodes/SFN_FaceSign.cs	.cs	2355
+Editor/Code/_Nodes/SFN_Final.cs	.cs	6176
+Editor/Code/_Nodes/SFN_Floor.cs	.cs	591
+Editor/Code/_Nodes/SFN_Fmod.cs	.cs	752
+Editor/Code/_Nodes/SFN_FogColor.cs	.cs	1606
+Editor/Code/_Nodes/SFN_Frac.cs	.cs	589
+Editor/Code/_Nodes/SFN_FragmentPosition.cs	.cs	1623
+Editor/Code/_Nodes/SFN_Fresnel.cs	.cs	2424
+Editor/Code/_Nodes/SFN_Get.cs	.cs	2664
+Editor/Code/_Nodes/SFN_HalfVector.cs	.cs	890
+Editor/Code/_Nodes/SFN_HsvToRgb.cs	.cs	2242
+Editor/Code/_Nodes/SFN_Hue.cs	.cs	1666
+Editor/Code/_Nodes/SFN_If.cs	.cs	3193
+Editor/Code/_Nodes/SFN_InverseLerp.cs	.cs	2356
+Editor/Code/_Nodes/SFN_Length.cs	.cs	1135
+Editor/Code/_Nodes/SFN_Lerp.cs	.cs	2020
+Editor/Code/_Nodes/SFN_LightAttenuation.cs	.cs	847
+Editor/Code/_Nodes/SFN_LightColor.cs	.cs	1354
+Editor/Code/_Nodes/SFN_LightPosition.cs	.cs	1426
+Editor/Code/_Nodes/SFN_LightVector.cs	.cs	894
+Editor/Code/_Nodes/SFN_Log.cs	.cs	2510
+Editor/Code/_Nodes/SFN_Matrix4x4.cs	.cs	2056
+Editor/Code/_Nodes/SFN_Matrix4x4Property.cs	.cs	2312
+Editor/Code/_Nodes/SFN_Max.cs	.cs	2303
+Editor/Code/_Nodes/SFN_Min.cs	.cs	2293
+Editor/Code/_Nodes/SFN_Multiply.cs	.cs	2172
+Editor/Code/_Nodes/SFN_MultiplyMatrix.cs	.cs	2284
+Editor/Code/_Nodes/SFN_Negate.cs	.cs	676
+Editor/Code/_Nodes/SFN_Node_Constant.cs	.cs	1404
+Editor/Code/_Nodes/SFN_Noise.cs	.cs	2190
+Editor/Code/_Nodes/SFN_NormalBlend.cs	.cs	2744
+Editor/Code/_Nodes/SFN_NormalVector.cs	.cs	1847
+Editor/Code/_Nodes/SFN_Normalize.cs	.cs	1035
+Editor/Code/_Nodes/SFN_ObjectPosition.cs	.cs	1331
+Editor/Code/_Nodes/SFN_ObjectScale.cs	.cs	1867
+Editor/Code/_Nodes/SFN_OneMinus.cs	.cs	1416
+Editor/Code/_Nodes/SFN_Panner.cs	.cs	4365
+Editor/Code/_Nodes/SFN_Parallax.cs	.cs	3974
+Editor/Code/_Nodes/SFN_Phi.cs	.cs	335
+Editor/Code/_Nodes/SFN_Pi.cs	.cs	329
+Editor/Code/_Nodes/SFN_PixelSize.cs	.cs	1081
+Editor/Code/_Nodes/SFN_Posterize.cs	.cs	1628
+Editor/Code/_Nodes/SFN_Power.cs	.cs	1676
+Editor/Code/_Nodes/SFN_ProjectionParameters.cs	.cs	1237
+Editor/Code/_Nodes/SFN_Reciprocal.cs	.cs	1428
+Editor/Code/_Nodes/SFN_Reflect.cs	.cs	916
+Editor/Code/_Nodes/SFN_Relay.cs	.cs	1712
+Editor/Code/_Nodes/SFN_RemapRange.cs	.cs	3725
+Editor/Code/_Nodes/SFN_RemapRangeAdvanced.cs	.cs	2942
+Editor/Code/_Nodes/SFN_RgbToHsv.cs	.cs	3698
+Editor/Code/_Nodes/SFN_Root2.cs	.cs	350
+Editor/Code/_Nodes/SFN_Rotator.cs	.cs	5109
+Editor/Code/_Nodes/SFN_Round.cs	.cs	591
+Editor/Code/_Nodes/SFN_SceneColor.cs	.cs	1571
+Editor/Code/_Nodes/SFN_SceneDepth.cs	.cs	1063
+Editor/Code/_Nodes/SFN_ScreenParameters.cs	.cs	1220
+Editor/Code/_Nodes/SFN_ScreenPos.cs	.cs	2468
+Editor/Code/_Nodes/SFN_Set.cs	.cs	2249
+Editor/Code/_Nodes/SFN_Sign.cs	.cs	638
+Editor/Code/_Nodes/SFN_Sin.cs	.cs	581
+Editor/Code/_Nodes/SFN_Slider.cs	.cs	4308
+Editor/Code/_Nodes/SFN_Smoothstep.cs	.cs	2190
+Editor/Code/_Nodes/SFN_Sqrt.cs	.cs	586
+Editor/Code/_Nodes/SFN_StaticBranch.cs	.cs	2063
+Editor/Code/_Nodes/SFN_Step.cs	.cs	816
+Editor/Code/_Nodes/SFN_Subtract.cs	.cs	751
+Editor/Code/_Nodes/SFN_SwitchProperty.cs	.cs	4265
+Editor/Code/_Nodes/SFN_Tan.cs	.cs	581
+Editor/Code/_Nodes/SFN_Tangent.cs	.cs	815
+Editor/Code/_Nodes/SFN_Tau.cs	.cs	334
+Editor/Code/_Nodes/SFN_Tex2d.cs	.cs	13914
+Editor/Code/_Nodes/SFN_Tex2dAsset.cs	.cs	10329
+Editor/Code/_Nodes/SFN_TexCoord.cs	.cs	3597
+Editor/Code/_Nodes/SFN_Time.cs	.cs	1338
+Editor/Code/_Nodes/SFN_ToggleProperty.cs	.cs	3650
+Editor/Code/_Nodes/SFN_Transform.cs	.cs	6808
+Editor/Code/_Nodes/SFN_Transpose.cs	.cs	1237
+Editor/Code/_Nodes/SFN_Trunc.cs	.cs	643
+Editor/Code/_Nodes/SFN_UVTile.cs	.cs	3856
+Editor/Code/_Nodes/SFN_ValueProperty.cs	.cs	2756
+Editor/Code/_Nodes/SFN_Vector1.cs	.cs	2500
+Editor/Code/_Nodes/SFN_Vector2.cs	.cs	2082
+Editor/Code/_Nodes/SFN_Vector3.cs	.cs	2412
+Editor/Code/_Nodes/SFN_Vector4.cs	.cs	2442
+Editor/Code/_Nodes/SFN_Vector4Property.cs	.cs	3445
+Editor/Code/_Nodes/SFN_VectorProjection.cs	.cs	1556
+Editor/Code/_Nodes/SFN_VectorRejection.cs	.cs	1578
+Editor/Code/_Nodes/SFN_VertexColor.cs	.cs	1250
+Editor/Code/_Nodes/SFN_ViewPosition.cs	.cs	1201
+Editor/Code/_Nodes/SFN_ViewReflectionVector.cs	.cs	725
+Editor/Code/_Nodes/SFN_ViewVector.cs	.cs	705
+Editor/Code/_Nodes/SF_Node.cs	.cs	69288
+Editor/Code/_Nodes/SF_Node_Arithmetic.cs	.cs	2121
+Editor/Code/_Nodes/SF_Node_Resizeable.cs	.cs	6142
+Editor/Code/_ShaderProperties/SFP_Branch.cs	.cs	728
+Editor/Code/_ShaderProperties/SFP_Color.cs	.cs	696
+Editor/Code/_ShaderProperties/SFP_Cubemap.cs	.cs	756
+Editor/Code/_ShaderProperties/SFP_Matrix4x4Property.cs	.cs	675
+Editor/Code/_ShaderProperties/SFP_Slider.cs	.cs	860
+Editor/Code/_ShaderProperties/SFP_SwitchProperty.cs	.cs	773
+Editor/Code/_ShaderProperties/SFP_Tex2d.cs	.cs	1226
+Editor/Code/_ShaderProperties/SFP_ToggleProperty.cs	.cs	773
+Editor/Code/_ShaderProperties/SFP_ValueProperty.cs	.cs	601
+Editor/Code/_ShaderProperties/SFP_Vector4Property.cs	.cs	730
+Editor/Code/_ShaderProperties/SF_ShaderProperty.cs	.cs	6255
+Editor/Code/_Utility/GUILines.cs	.cs	13839
+Editor/Code/_Utility/SF_Blit.cs	.cs	5786
+Editor/Code/_Utility/SF_ColorPicker.cs	.cs	36149
+Editor/Code/_Utility/SF_Debug.cs	.cs	629
+Editor/Code/_Utility/SF_DraggableSeparator.cs	.cs	1895
+Editor/Code/_Utility/SF_Extensions.cs	.cs	12881
+Editor/Code/_Utility/SF_GUI.cs	.cs	20819
+Editor/Code/_Utility/SF_Link.cs	.cs	1330
+Editor/Code/_Utility/SF_MinMax.cs	.cs	613
+Editor/Code/_Utility/SF_Resources.cs	.cs	2176
+Editor/Code/_Utility/SF_Styles.cs	.cs	10201
+Editor/Code/_Utility/SF_Tools.cs	.cs	13187
+Editor/Code/_Utility/SF_Web.cs	.cs	849
+Editor/Code/_Utility/SF_ZoomArea.cs	.cs	1422
+Editor/Code/_Utility/SerializableDictionary.cs	.cs	1804
+Editor/InternalResources/GPU Rendering/Common/ExtractChannel.shader	.shader	779
+Editor/InternalResources/GPU Rendering/Common/FillColor.shader	.shader	1061
+Editor/InternalResources/GPU Rendering/Common/ReadPackedData.shader	.shader	1156
+Editor/InternalResources/GPU Rendering/SFN_Abs/SFN_Abs.shader	.shader	1344
+Editor/InternalResources/GPU Rendering/SFN_Add/SFN_Add_2.shader	.shader	1457
+Editor/InternalResources/GPU Rendering/SFN_Add/SFN_Add_3.shader	.shader	1577
+Editor/InternalResources/GPU Rendering/SFN_Add/SFN_Add_4.shader	.shader	1697
+Editor/InternalResources/GPU Rendering/SFN_Add/SFN_Add_5.shader	.shader	1817
+Editor/InternalResources/GPU Rendering/SFN_AmbientLight/SFN_AmbientLight.shader	.shader	1114
+Editor/InternalResources/GPU Rendering/SFN_Append/SFN_Append.shader	.shader	2515
+Editor/InternalResources/GPU Rendering/SFN_ArcCos/SFN_ArcCos.shader	.shader	1348
+Editor/InternalResources/GPU Rendering/SFN_ArcSin/SFN_ArcSin.shader	.shader	1348
+Editor/InternalResources/GPU Rendering/SFN_ArcTan/SFN_ArcTan.shader	.shader	1348
+Editor/InternalResources/GPU Rendering/SFN_ArcTan2/SFN_ArcTan2_NOTO.shader	.shader	1485
+Editor/InternalResources/GPU Rendering/SFN_ArcTan2/SFN_ArcTan2_NPTP.shader	.shader	1469
+Editor/InternalResources/GPU Rendering/SFN_ArcTan2/SFN_ArcTan2_ZTO.shader	.shader	1488
+Editor/InternalResources/GPU Rendering/SFN_ArcTan2/SFN_ArcTan2_ZTOW.shader	.shader	1492
+Editor/InternalResources/GPU Rendering/SFN_Bitangent/SFN_Bitangent.shader	.shader	1645
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_ColorBurn.shader	.shader	1503
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_ColorDodge.shader	.shader	1498
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_Darken.shader	.shader	1491
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_Difference.shader	.shader	1495
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_Divide.shader	.shader	1488
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_Exclusion.shader	.shader	1513
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_HardLight.shader	.shader	1552
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_HardMix.shader	.shader	1503
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_Lighten.shader	.shader	1492
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_LinearBurn.shader	.shader	1496
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_LinearDodge.shader	.shader	1493
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_LinearLight.shader	.shader	1546
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_Multiply.shader	.shader	1490
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_Overlay.shader	.shader	1550
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_PinLight.shader	.shader	1541
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_Screen.shader	.shader	1504
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_Subtract.shader	.shader	1490
+Editor/InternalResources/GPU Rendering/SFN_Blend/SFN_Blend_VividLight.shader	.shader	1552
+Editor/InternalResources/GPU Rendering/SFN_BlendOver/SFN_BlendOver_GammaCorr.shader	.shader	1662
+Editor/InternalResources/GPU Rendering/SFN_BlendOver/SFN_BlendOver_Simple.shader	.shader	1564
+Editor/InternalResources/GPU Rendering/SFN_Ceil/SFN_Ceil.shader	.shader	1346
+Editor/InternalResources/GPU Rendering/SFN_ChannelBlend/SFN_ChannelBlend.shader	.shader	2557
+Editor/InternalResources/GPU Rendering/SFN_Clamp/SFN_Clamp.shader	.shader	1610
+Editor/InternalResources/GPU Rendering/SFN_Clamp01/SFN_Clamp01.shader	.shader	1353
+Editor/InternalResources/GPU Rendering/SFN_Code/SFN_Code.shader	.shader	1204
+Editor/InternalResources/GPU Rendering/SFN_ComponentMask/SFN_ComponentMask_CC1.shader	.shader	1626
+Editor/InternalResources/GPU Rendering/SFN_ComponentMask/SFN_ComponentMask_CC2.shader	.shader	1643
+Editor/InternalResources/GPU Rendering/SFN_ComponentMask/SFN_ComponentMask_CC3.shader	.shader	1651
+Editor/InternalResources/GPU Rendering/SFN_ComponentMask/SFN_ComponentMask_CC4.shader	.shader	1659
+Editor/InternalResources/GPU Rendering/SFN_ConstantClamp/SFN_ConstantClamp.shader	.shader	1540
+Editor/InternalResources/GPU Rendering/SFN_ConstantInverseLerp/SFN_ConstantInverseLerp.shader	.shader	1559
+Editor/InternalResources/GPU Rendering/SFN_ConstantLerp/SFN_ConstantLerp.shader	.shader	1513
+Editor/InternalResources/GPU Rendering/SFN_Cos/SFN_Cos.shader	.shader	1344
+Editor/InternalResources/GPU Rendering/SFN_Cross/SFN_Cross.shader	.shader	1481
+Editor/InternalResources/GPU Rendering/SFN_Cubemap/SFN_Cubemap.shader	.shader	1487
+Editor/InternalResources/GPU Rendering/SFN_DDX/SFN_DDX.shader	.shader	1344
+Editor/InternalResources/GPU Rendering/SFN_DDXY/SFN_DDXY.shader	.shader	1348
+Editor/InternalResources/GPU Rendering/SFN_DDY/SFN_DDY.shader	.shader	1344
+Editor/InternalResources/GPU Rendering/SFN_Depth/SFN_Depth.shader	.shader	1448
+Editor/InternalResources/GPU Rendering/SFN_DepthBlend/SFN_DepthBlend.shader	.shader	1370
+Editor/InternalResources/GPU Rendering/SFN_Desaturate/SFN_Desaturate_DES.shader	.shader	1533
+Editor/InternalResources/GPU Rendering/SFN_Desaturate/SFN_Desaturate_REQONLY.shader	.shader	1514
+Editor/InternalResources/GPU Rendering/SFN_Distance/SFN_Distance.shader	.shader	1469
+Editor/InternalResources/GPU Rendering/SFN_Divide/SFN_Divide.shader	.shader	1456
+Editor/InternalResources/GPU Rendering/SFN_Dot/SFN_Dot_ABS.shader	.shader	1468
+Editor/InternalResources/GPU Rendering/SFN_Dot/SFN_Dot_NEG.shader	.shader	1470
+Editor/InternalResources/GPU Rendering/SFN_Dot/SFN_Dot_NRM.shader	.shader	1471
+Editor/InternalResources/GPU Rendering/SFN_Dot/SFN_Dot_POS.shader	.shader	1470
+Editor/InternalResources/GPU Rendering/SFN_Dot/SFN_Dot_STD.shader	.shader	1463
+Editor/InternalResources/GPU Rendering/SFN_Exp/SFN_Exp.shader	.shader	1344
+Editor/InternalResources/GPU Rendering/SFN_FaceSign/SFN_FaceSign.shader	.shader	1303
+Editor/InternalResources/GPU Rendering/SFN_Floor/SFN_Floor.shader	.shader	1348
+Editor/InternalResources/GPU Rendering/SFN_Fmod/SFN_Fmod.shader	.shader	1461
+Editor/InternalResources/GPU Rendering/SFN_FogColor/SFN_FogColor.shader	.shader	1100
+Editor/InternalResources/GPU Rendering/SFN_Frac/SFN_Frac.shader	.shader	1346
+Editor/InternalResources/GPU Rendering/SFN_FragmentPosition/SFN_FragmentPosition.shader	.shader	1321
+Editor/InternalResources/GPU Rendering/SFN_Fresnel/SFN_Fresnel_EXP.shader	.shader	2061
+Editor/InternalResources/GPU Rendering/SFN_Fresnel/SFN_Fresnel_NRM.shader	.shader	2140
+Editor/InternalResources/GPU Rendering/SFN_Fresnel/SFN_Fresnel_NRM_EXP.shader	.shader	2178
+Editor/InternalResources/GPU Rendering/SFN_Fresnel/SFN_Fresnel_REQONLY.shader	.shader	1989
+Editor/InternalResources/GPU Rendering/SFN_Get/SFN_Get.shader	.shader	1339
+Editor/InternalResources/GPU Rendering/SFN_HalfVector/SFN_HalfVector.shader	.shader	1607
+Editor/InternalResources/GPU Rendering/SFN_HsvToRgb/SFN_HsvToRgb.shader	.shader	1684
+Editor/InternalResources/GPU Rendering/SFN_Hue/SFN_Hue.shader	.shader	1415
+Editor/InternalResources/GPU Rendering/SFN_If/SFN_If.shader	.shader	1913
+Editor/InternalResources/GPU Rendering/SFN_InverseLerp/SFN_InverseLerp.shader	.shader	1590
+Editor/InternalResources/GPU Rendering/SFN_Length/SFN_Length.shader	.shader	1350
+Editor/InternalResources/GPU Rendering/SFN_Lerp/SFN_Lerp.shader	.shader	1580
+Editor/InternalResources/GPU Rendering/SFN_LightAttenuation/SFN_LightAttenuation.shader	.shader	1331
+Editor/InternalResources/GPU Rendering/SFN_LightColor/SFN_LightColor.shader	.shader	1190
+Editor/InternalResources/GPU Rendering/SFN_LightPosition/SFN_LightPosition.shader	.shader	1138
+Editor/InternalResources/GPU Rendering/SFN_LightVector/SFN_LightVector.shader	.shader	1428
+Editor/InternalResources/GPU Rendering/SFN_Log/SFN_Log_LOG.shader	.shader	1348
+Editor/InternalResources/GPU Rendering/SFN_Log/SFN_Log_LOG10.shader	.shader	1353
+Editor/InternalResources/GPU Rendering/SFN_Log/SFN_Log_LOG2.shader	.shader	1350
+Editor/InternalResources/GPU Rendering/SFN_Matrix4x4/SFN_Matrix4x4.shader	.shader	1242
+Editor/InternalResources/GPU Rendering/SFN_Matrix4x4Property/SFN_Matrix4x4Property.shader	.shader	1250
+Editor/InternalResources/GPU Rendering/SFN_Max/SFN_Max_2.shader	.shader	1461
+Editor/InternalResources/GPU Rendering/SFN_Max/SFN_Max_3.shader	.shader	1585
+Editor/InternalResources/GPU Rendering/SFN_Max/SFN_Max_4.shader	.shader	1709
+Editor/InternalResources/GPU Rendering/SFN_Max/SFN_Max_5.shader	.shader	1833
+Editor/InternalResources/GPU Rendering/SFN_Min/SFN_Min_2.shader	.shader	1461
+Editor/InternalResources/GPU Rendering/SFN_Min/SFN_Min_3.shader	.shader	1585
+Editor/InternalResources/GPU Rendering/SFN_Min/SFN_Min_4.shader	.shader	1709
+Editor/InternalResources/GPU Rendering/SFN_Min/SFN_Min_5.shader	.shader	1833
+Editor/InternalResources/GPU Rendering/SFN_Multiply/SFN_Multiply_2.shader	.shader	1462
+Editor/InternalResources/GPU Rendering/SFN_Multiply/SFN_Multiply_3.shader	.shader	1582
+Editor/InternalResources/GPU Rendering/SFN_Multiply/SFN_Multiply_4.shader	.shader	1702
+Editor/InternalResources/GPU Rendering/SFN_Multiply/SFN_Multiply_5.shader	.shader	1822
+Editor/InternalResources/GPU Rendering/SFN_MultiplyMatrix/SFN_MultiplyMatrix.shader	.shader	1474
+Editor/InternalResources/GPU Rendering/SFN_Negate/SFN_Negate.shader	.shader	1347
+Editor/InternalResources/GPU Rendering/SFN_Noise/SFN_Noise.shader	.shader	1454
+Editor/InternalResources/GPU Rendering/SFN_NormalBlend/SFN_NormalBlend.shader	.shader	1613
+Editor/InternalResources/GPU Rendering/SFN_NormalVector/SFN_NormalVector.shader	.shader	1417
+Editor/InternalResources/GPU Rendering/SFN_Normalize/SFN_Normalize.shader	.shader	1356
+Editor/InternalResources/GPU Rendering/SFN_ObjectPosition/SFN_ObjectPosition.shader	.shader	1215
+Editor/InternalResources/GPU Rendering/SFN_ObjectScale/SFN_ObjectScale_Default.shader	.shader	1342
+Editor/InternalResources/GPU Rendering/SFN_ObjectScale/SFN_ObjectScale_Reciprocal.shader	.shader	1287
+Editor/InternalResources/GPU Rendering/SFN_OneMinus/SFN_OneMinus.shader	.shader	1350
+Editor/InternalResources/GPU Rendering/SFN_Panner/SFN_Panner_DIST.shader	.shader	1686
+Editor/InternalResources/GPU Rendering/SFN_Panner/SFN_Panner_REQONLY.shader	.shader	1747
+Editor/InternalResources/GPU Rendering/SFN_Parallax/SFN_Parallax_DEP.shader	.shader	2681
+Editor/InternalResources/GPU Rendering/SFN_Parallax/SFN_Parallax_DEP_REF.shader	.shader	2686
+Editor/InternalResources/GPU Rendering/SFN_Parallax/SFN_Parallax_REF.shader	.shader	2680
+Editor/InternalResources/GPU Rendering/SFN_Parallax/SFN_Parallax_REQONLY.shader	.shader	2682
+Editor/InternalResources/GPU Rendering/SFN_Parallax/SFN_Parallax_UV.shader	.shader	2661
+Editor/InternalResources/GPU Rendering/SFN_Parallax/SFN_Parallax_UV_DEP.shader	.shader	2666
+Editor/InternalResources/GPU Rendering/SFN_Parallax/SFN_Parallax_UV_DEP_REF.shader	.shader	2691
+Editor/InternalResources/GPU Rendering/SFN_Parallax/SFN_Parallax_UV_REF.shader	.shader	2684
+Editor/InternalResources/GPU Rendering/SFN_PixelSize/SFN_PixelSize.shader	.shader	1044
+Editor/InternalResources/GPU Rendering/SFN_Posterize/SFN_Posterize.shader	.shader	1505
+Editor/InternalResources/GPU Rendering/SFN_Power/SFN_Power.shader	.shader	1484
+Editor/InternalResources/GPU Rendering/SFN_ProjectionParameters/SFN_ProjectionParameters.shader	.shader	995
+Editor/InternalResources/GPU Rendering/SFN_Reciprocal/SFN_Reciprocal.shader	.shader	1354
+Editor/InternalResources/GPU Rendering/SFN_Reflect/SFN_Reflect.shader	.shader	1467
+Editor/InternalResources/GPU Rendering/SFN_Relay/SFN_Relay.shader	.shader	1341
+Editor/InternalResources/GPU Rendering/SFN_RemapRange/SFN_RemapRange.shader	.shader	1526
+Editor/InternalResources/GPU Rendering/SFN_RemapRangeAdvanced/SFN_RemapRangeAdvanced.shader	.shader	1937
+Editor/InternalResources/GPU Rendering/SFN_RgbToHsv/SFN_RgbToHsv.shader	.shader	1738
+Editor/InternalResources/GPU Rendering/SFN_Rotator/SFN_Rotator_ANG.shader	.shader	1996
+Editor/InternalResources/GPU Rendering/SFN_Rotator/SFN_Rotator_PIV.shader	.shader	2040
+Editor/InternalResources/GPU Rendering/SFN_Rotator/SFN_Rotator_PIV_ANG.shader	.shader	1992
+Editor/InternalResources/GPU Rendering/SFN_Rotator/SFN_Rotator_PIV_SPD.shader	.shader	2062
+Editor/InternalResources/GPU Rendering/SFN_Rotator/SFN_Rotator_PIV_SPD_ANG.shader	.shader	2005
+Editor/InternalResources/GPU Rendering/SFN_Rotator/SFN_Rotator_REQONLY.shader	.shader	2061
+Editor/InternalResources/GPU Rendering/SFN_Rotator/SFN_Rotator_SPD.shader	.shader	2066
+Editor/InternalResources/GPU Rendering/SFN_Rotator/SFN_Rotator_SPD_ANG.shader	.shader	2009
+Editor/InternalResources/GPU Rendering/SFN_Round/SFN_Round.shader	.shader	1348
+Editor/InternalResources/GPU Rendering/SFN_SceneColor/SFN_SceneColor.shader	.shader	1368
+Editor/InternalResources/GPU Rendering/SFN_SceneDepth/SFN_SceneDepth.shader	.shader	1243
+Editor/InternalResources/GPU Rendering/SFN_ScreenParameters/SFN_ScreenParameters.shader	.shader	1012
+Editor/InternalResources/GPU Rendering/SFN_ScreenPos/SFN_ScreenPos.shader	.shader	1277
+Editor/InternalResources/GPU Rendering/SFN_Set/SFN_Set.shader	.shader	1339
+Editor/InternalResources/GPU Rendering/SFN_Sign/SFN_Sign.shader	.shader	1346
+Editor/InternalResources/GPU Rendering/SFN_Sin/SFN_Sin.shader	.shader	1344
+Editor/InternalResources/GPU Rendering/SFN_Smoothstep/SFN_Smoothstep.shader	.shader	1598
+Editor/InternalResources/GPU Rendering/SFN_Sqrt/SFN_Sqrt.shader	.shader	1346
+Editor/InternalResources/GPU Rendering/SFN_Step/SFN_Step.shader	.shader	1461
+Editor/InternalResources/GPU Rendering/SFN_Subtract/SFN_Subtract.shader	.shader	1460
+Editor/InternalResources/GPU Rendering/SFN_SwitchProperty/SFN_SwitchProperty.shader	.shader	1539
+Editor/InternalResources/GPU Rendering/SFN_Tan/SFN_Tan.shader	.shader	1344
+Editor/InternalResources/GPU Rendering/SFN_Tangent/SFN_Tangent.shader	.shader	1289
+Editor/InternalResources/GPU Rendering/SFN_Tex2d/SFN_Tex2d_MIP.shader	.shader	1621
+Editor/InternalResources/GPU Rendering/SFN_Tex2d/SFN_Tex2d_NoInputs.shader	.shader	1509
+Editor/InternalResources/GPU Rendering/SFN_Tex2d/SFN_Tex2d_UV.shader	.shader	1617
+Editor/InternalResources/GPU Rendering/SFN_Tex2d/SFN_Tex2d_UV_MIP.shader	.shader	1722
+Editor/InternalResources/GPU Rendering/SFN_Tex2dAsset/SFN_Tex2dAsset.shader	.shader	1460
+Editor/InternalResources/GPU Rendering/SFN_TexCoord/SFN_TexCoord.shader	.shader	995
+Editor/InternalResources/GPU Rendering/SFN_Time/SFN_Time.shader	.shader	1106
+Editor/InternalResources/GPU Rendering/SFN_Transform/SFN_Transform.shader	.shader	4333
+Editor/InternalResources/GPU Rendering/SFN_Transpose/SFN_Transpose.shader	.shader	1357
+Editor/InternalResources/GPU Rendering/SFN_Trunc/SFN_Trunc.shader	.shader	1348
+Editor/InternalResources/GPU Rendering/SFN_UVTile/SFN_UVTile.shader	.shader	1936
+Editor/InternalResources/GPU Rendering/SFN_VectorProjection/SFN_VectorProjection.shader	.shader	1489
+Editor/InternalResources/GPU Rendering/SFN_VectorRejection/SFN_VectorRejection.shader	.shader	1495
+Editor/InternalResources/GPU Rendering/SFN_VertexColor/SFN_VertexColor.shader	.shader	1131
+Editor/InternalResources/GPU Rendering/SFN_ViewPosition/SFN_ViewPosition.shader	.shader	1106
+Editor/InternalResources/GPU Rendering/SFN_ViewReflectionVector/SFN_ViewReflectionVector.shader	.shader	1639
+Editor/InternalResources/GPU Rendering/SFN_ViewVector/SFN_ViewVector.shader	.shader	1421
+Editor/InternalResources/Inspectors/ShaderForgeInspector.cs	.cs	15907
+Editor/InternalResources/Inspectors/ShaderForgeMaterialInspector.cs	.cs	4266
+Editor/InternalResources/Interface/Fonts/VeraMono-Bold-Italic.ttf	.ttf	55032
+Editor/InternalResources/Interface/Fonts/VeraMono-Bold.ttf	.ttf	49052
+Editor/InternalResources/Interface/Fonts/VeraMono-Italic.ttf	.ttf	54508
+Editor/InternalResources/Interface/Fonts/VeraMono.ttf	.ttf	49224
+Editor/InternalResources/Interface/Nodes/Data/node_3d_data_mask.png	.png	5255
+Editor/InternalResources/Interface/Nodes/Data/sfn_bitangent.png	.png	8144
+Editor/InternalResources/Interface/Nodes/Data/sfn_depth.png	.png	5795
+Editor/InternalResources/Interface/Nodes/Data/sfn_fragmentposition.png	.png	8338
+Editor/InternalResources/Interface/Nodes/Data/sfn_fresnel.png	.png	4701
+Editor/InternalResources/Interface/Nodes/Data/sfn_halfvector.png	.png	5781
+Editor/InternalResources/Interface/Nodes/Data/sfn_lightattenuation.png	.png	3201
+Editor/InternalResources/Interface/Nodes/Data/sfn_lightcolor.png	.png	3218
+Editor/InternalResources/Interface/Nodes/Data/sfn_lightvector.png	.png	890
+Editor/InternalResources/Interface/Nodes/Data/sfn_normalvector.png	.png	8329
+Editor/InternalResources/Interface/Nodes/Data/sfn_normalvector_2.png	.png	16994
+Editor/InternalResources/Interface/Nodes/Data/sfn_tangent.png	.png	5402
+Editor/InternalResources/Interface/Nodes/Data/sfn_viewreflectionvector.png	.png	10347
+Editor/InternalResources/Interface/Nodes/Data/sfn_viewvector.png	.png	6320
+Editor/InternalResources/Interface/Nodes/sfn_ambientlight.png	.png	6709
+Editor/InternalResources/Interface/Nodes/sfn_bitangent.png	.png	7225
+Editor/InternalResources/Interface/Nodes/sfn_depth.png	.png	8434
+Editor/InternalResources/Interface/Nodes/sfn_e.png	.png	7110
+Editor/InternalResources/Interface/Nodes/sfn_facesign.png	.png	7873
+Editor/InternalResources/Interface/Nodes/sfn_facesign_2.png	.png	7815
+Editor/InternalResources/Interface/Nodes/sfn_final.png	.png	50345
+Editor/InternalResources/Interface/Nodes/sfn_fogcolor.png	.png	7234
+Editor/InternalResources/Interface/Nodes/sfn_fogcolor_2.png	.png	7153
+Editor/InternalResources/Interface/Nodes/sfn_fragmentposition.png	.png	8201
+Editor/InternalResources/Interface/Nodes/sfn_halfvector.png	.png	7798
+Editor/InternalResources/Interface/Nodes/sfn_lightattenuation.png	.png	9742
+Editor/InternalResources/Interface/Nodes/sfn_lightcolor.png	.png	14757
+Editor/InternalResources/Interface/Nodes/sfn_lightposition.png	.png	5241
+Editor/InternalResources/Interface/Nodes/sfn_lightvector.png	.png	6597
+Editor/InternalResources/Interface/Nodes/sfn_normalvector.png	.png	6126
+Editor/InternalResources/Interface/Nodes/sfn_normalvector_2.png	.png	6580
+Editor/InternalResources/Interface/Nodes/sfn_objectposition.png	.png	7589
+Editor/InternalResources/Interface/Nodes/sfn_objectscale.png	.png	7816
+Editor/InternalResources/Interface/Nodes/sfn_phi.png	.png	7176
+Editor/InternalResources/Interface/Nodes/sfn_pi.png	.png	6480
+Editor/InternalResources/Interface/Nodes/sfn_projectionparameters.png	.png	7026
+Editor/InternalResources/Interface/Nodes/sfn_root2.png	.png	7231
+Editor/InternalResources/Interface/Nodes/sfn_screenparameters.png	.png	6839
+Editor/InternalResources/Interface/Nodes/sfn_screenpos.png	.png	9231
+Editor/InternalResources/Interface/Nodes/sfn_screenpos_2.png	.png	9548
+Editor/InternalResources/Interface/Nodes/sfn_screenpos_3.png	.png	8259
+Editor/InternalResources/Interface/Nodes/sfn_tangent.png	.png	6771
+Editor/InternalResources/Interface/Nodes/sfn_tau.png	.png	5841
+Editor/InternalResources/Interface/Nodes/sfn_time.png	.png	7557
+Editor/InternalResources/Interface/Nodes/sfn_vertexcolor.png	.png	10172
+Editor/InternalResources/Interface/Nodes/sfn_viewposition.png	.png	5025
+Editor/InternalResources/Interface/Nodes/sfn_viewreflectionvector.png	.png	7461
+Editor/InternalResources/Interface/Nodes/sfn_viewvector.png	.png	6479
+Editor/InternalResources/Interface/chk.png	.png	3657
+Editor/InternalResources/Interface/chk_light.png	.png	3495
+Editor/InternalResources/Interface/handle_drag.tga	.tga	128
+Editor/InternalResources/Interface/icon.png	.png	3607
+Editor/InternalResources/Interface/icon_light.png	.png	3623
+Editor/InternalResources/Interface/icon_normal.tga	.tga	1068
+Editor/InternalResources/Interface/inst_frag.png	.png	3028
+Editor/InternalResources/Interface/inst_frag_light.png	.png	3036
+Editor/InternalResources/Interface/inst_frag_tex.png	.png	3353
+Editor/InternalResources/Interface/inst_frag_tex_light.png	.png	3349
+Editor/InternalResources/Interface/inst_vert.png	.png	3027
+Editor/InternalResources/Interface/inst_vert_light.png	.png	3019
+Editor/InternalResources/Interface/inst_vert_tex.png	.png	3286
+Editor/InternalResources/Interface/inst_vert_tex_light.png	.png	3296
+Editor/InternalResources/Interface/logo.png	.png	14965
+Editor/InternalResources/Interface/logo_light.png	.png	16834
+Editor/InternalResources/Interface/preset_custom.png	.png	14583
+Editor/InternalResources/Interface/preset_highlight.png	.png	4023
+Editor/InternalResources/Interface/preset_litbasic.png	.png	11818
+Editor/InternalResources/Interface/preset_litpbr.png	.png	10846
+Editor/InternalResources/Interface/preset_particleadditive.png	.png	4510
+Editor/InternalResources/Interface/preset_particleadditive_light.png	.png	3311
+Editor/InternalResources/Interface/preset_particlealphablended.png	.png	3863
+Editor/InternalResources/Interface/preset_particlealphablended_light.png	.png	3319
+Editor/InternalResources/Interface/preset_particlemultiplicative.png	.png	3933
+Editor/InternalResources/Interface/preset_particlemultiplicative_light.png	.png	3340
+Editor/InternalResources/Interface/preset_posteffect.png	.png	7133
+Editor/InternalResources/Interface/preset_sky.png	.png	12346
+Editor/InternalResources/Interface/preset_sprite.png	.png	9490
+Editor/InternalResources/Interface/preset_unlit.png	.png	8053
+Editor/InternalResources/Interface/screenshot_icon.png	.png	3527
+Editor/InternalResources/Interface/screenshot_icon_light.png	.png	3747
+Editor/InternalResources/Meshes/sf_meshes.fbx	.fbx	267744
+Editor/InternalResources/Shader Presets/PresetBasic.shader	.shader	6561
+Editor/InternalResources/Shader Presets/PresetCustomLighting.shader	.shader	10016
+Editor/InternalResources/Shader Presets/PresetPBR.shader	.shader	21954
+Editor/InternalResources/Shader Presets/PresetParticleAdditive.shader	.shader	3938
+Editor/InternalResources/Shader Presets/PresetParticleAlphaBlended.shader	.shader	4169
+Editor/InternalResources/Shader Presets/PresetParticleMultiplicative.shader	.shader	3915
+Editor/InternalResources/Shader Presets/PresetPostEffect.shader	.shader	3614
+Editor/InternalResources/Shader Presets/PresetSky.shader	.shader	7728
+Editor/InternalResources/Shader Presets/PresetSprite.shader	.shader	6673
+Editor/InternalResources/Shader Presets/PresetUnlit.shader	.shader	2628
+Example Assets/Meshes/sf_example_meshes.fbx	.fbx	106112
+Example Assets/Scripts/EditorLabel.cs	.cs	1784
+Example Assets/Scripts/EnableCameraDepthInForward.cs	.cs	480
+Example Assets/Scripts/SoftNormalsToVertexColor.cs	.cs	2602
+Example Assets/Shaders/CustomLighting.mat	.mat	1126
+Example Assets/Shaders/CustomLighting.shader	.shader	12471
+Example Assets/Shaders/LightWrapping.mat	.mat	2250
+Example Assets/Shaders/LightWrapping.shader	.shader	20188
+Example Assets/Shaders/Parallax.mat	.mat	1869
+Example Assets/Shaders/Parallax.shader	.shader	23222
+Example Assets/Shaders/PixelRotator.mat	.mat	2075
+Example Assets/Shaders/PixelRotator.shader	.shader	12244
+Example Assets/Shaders/Refraction.mat	.mat	1111
+Example Assets/Shaders/Refraction.shader	.shader	20131
+Example Assets/Shaders/TessellationDisplacement.mat	.mat	2878
+Example Assets/Shaders/TessellationDisplacement.shader	.shader	44077
+Example Assets/Shaders/Tiles.mat	.mat	5315
+Example Assets/Shaders/Tiles.shader	.shader	20706
+Example Assets/Shaders/Vegetation.mat	.mat	2295
+Example Assets/Shaders/Vegetation.shader	.shader	24824
+Example Assets/Shaders/VertexAnimation.mat	.mat	2550
+Example Assets/Shaders/VertexAnimation.shader	.shader	25797
+Example Assets/Shaders/VertexAnimation_blue.mat	.mat	2555
+Example Assets/Shaders/VertexColorRounding.mat	.mat	518
+Example Assets/Shaders/VertexColorRounding.shader	.shader	5192
+Example Assets/Textures/sf_alpha_circle.png	.png	32947
+Example Assets/Textures/sf_alpha_circle_02.png	.png	34168
+Example Assets/Textures/sf_conc_floor_01_d.tga	.tga	4194348
+Example Assets/Textures/sf_conc_floor_01_n.tga	.tga	3145772
+Example Assets/Textures/sf_gradient_light_01.png	.png	3511
+Example Assets/Textures/sf_gradient_ramp_01.png	.png	3468
+Example Assets/Textures/sf_gradient_ramp_02.png	.png	3167
+Example Assets/Textures/sf_leaves_01_d.tga	.tga	4194348
+Example Assets/Textures/sf_leaves_01_n.png	.png	924690
+Example Assets/Textures/sf_noise_clouds_01.png	.png	396918
+Example Assets/Textures/sf_noise_grain_01.png	.png	128100
+Example Assets/Textures/sf_parallax_test_ao_height.tga	.tga	65580
+Example Assets/Textures/sf_parallax_test_normals.tga	.tga	49196
+Example Assets/Textures/sf_rgb_overlap.png	.png	16671
+Example Assets/Textures/sf_texcoords.png	.png	3393
+Example Assets/Textures/sf_tile_01_d.tga	.tga	3116
+Example Assets/Textures/sf_tile_01_n.tga	.tga	3116
+Example Scene.unity	.unity	39497
+Readme.txt	.txt	3171
